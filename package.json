@@ -8,6 +8,7 @@
     "watch:css": "tailwindcss -i ./src/input.css -o ./style.css --watch",
     "copy:content": "rsync -a --delete /Users/joel/Nextcloud/Apps/Obsidian/joel/nowsletter.org/Website/ Website/",
     "build": "npm run copy:content && npm run build:css && eleventy",
+    "build:ci": "npm run build:css && eleventy",
     "watch:content": "chokidar \"/Users/joel/Nextcloud/Apps/Obsidian/joel/nowsletter.org/Website/**/*\" -c \"npm run copy:content\" -d 500",
     "serve": "eleventy --serve",
     "dev": "npm run copy:content && npm-run-all --parallel watch:css watch:content serve"
