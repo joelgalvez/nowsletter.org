@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% if title %}
+                {{ title }} — nowsletter.org{% else %}nowsletter.org{% endif %}
+        </title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="px-2 md:px-4 my-8 md:my-16 text-xl font-medium">
+        <div class="text text-width mx-auto">
+            <div class="slideshow" data-slideshow>
+                <div class="slideshow-nav flex gap-4 items-center mt-4">
+                    <button data-prev>← Previous</button>
+                    <span data-counter></span>
+                    <button data-next>Next →</button>
+                </div>
+                <div class="slides">
+                    {% for step in collections["how-step"] %}
+                        <div class="slide" data-step="{{ step.data.stepNumber }}">
+                            <h3>{{ step.data.stepNumber }}. {{ step.data.stepTitle }}</h3>
+                            {{ step.content | safe }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {{ content | safe }}
+        </div>
+        <script>
+            document.querySelectorAll('[data-slideshow]').forEach(el => {
+                const slides = el.querySelectorAll('.slide');
+                const counter = el.querySelector('[data-counter]');
+                let current = 0;
+                function show(i) {
+                    current = Math.max(0, Math.min(i, slides.length - 1));
+                    slides.forEach(
+                        (s, idx) => s.style.display = idx === current
+                        ? 'block'
+                        : 'none');
+                    counter.textContent = (current + 1) + ' / ' + slides.length;
+                }
+                el.querySelector('[data-prev]').addEventListener('click', () => show(current - 1));
+                el.querySelector('[data-next]').addEventListener('click', () => show(current + 1));
+                show(0);
+            });
+        </script>
+    </body>
+</html>

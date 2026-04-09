@@ -1,0 +1,39 @@
+---
+title: How it works
+layout: main.njk
+permalink: /how/
+---
+
+<div class="slideshow" data-slideshow>
+    <div class="slides">
+        {% for step in collections["how-step"] %}
+        <div class="slide" data-step="{{ step.data.stepNumber }}">
+            <h3>{{ step.data.stepNumber }}. {{ step.data.stepTitle }}</h3>
+            {{ step.content | safe }}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="slideshow-nav flex gap-4 items-center mt-4">
+        <button data-prev>← Previous</button>
+        <span data-counter></span>
+        <button data-next>Next →</button>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('[data-slideshow]').forEach(el => {
+    const slides = el.querySelectorAll('.slide');
+    const counter = el.querySelector('[data-counter]');
+    let current = 0;
+
+    function show(i) {
+        current = Math.max(0, Math.min(i, slides.length - 1));
+        slides.forEach((s, idx) => s.style.display = idx === current ? 'block' : 'none');
+        counter.textContent = (current + 1) + ' / ' + slides.length;
+    }
+
+    el.querySelector('[data-prev]').addEventListener('click', () => show(current - 1));
+    el.querySelector('[data-next]').addEventListener('click', () => show(current + 1));
+    show(0);
+});
+</script>

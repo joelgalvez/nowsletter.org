@@ -9,7 +9,9 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("Website/**/*.{jpg,jpeg,png,gif,svg,webp}");
 
   eleventyConfig.addPreprocessor("obsidian-images", "md", (data, content) => {
-    const dir = data.page.url || "/";
+    // Derive directory from input path (e.g. ./Website/how/file.md → /how/)
+    const inputDir = data.page.inputPath.replace(/^\.\/Website/, "").replace(/\/[^/]+$/, "/");
+    const dir = inputDir || "/";
     return content.replace(/!\[\[([^\]]+\.(?:jpg|jpeg|png|gif|svg|webp))\]\]/gi, (match, filepath) => {
       const basename = filepath.split("/").pop();
       return `![${basename}](${dir}${basename})`;
@@ -24,6 +26,30 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addTransform("external-links", (content) => {
     return content.replace(/<a\s+href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
+  });
+
+  // Numbered files in how/ become slideshow steps, not standalone pages
+  eleventyConfig.addCollection("how-step", (collectionApi) => {
+    return collectionApi.getAll()
+      .filter(item => /\/how\/\d+\./.test(item.inputPath))
+      .sort((a, b) => {
+        const numA = parseInt(a.fileSlug.match(/^(\d+)/)?.[1] || 0);
+        const numB = parseInt(b.fileSlug.match(/^(\d+)/)?.[1] || 0);
+        return numA - numB;
+      })
+      .map(item => {
+        const num = parseInt(item.fileSlug.match(/^(\d+)/)?.[1] || 0);
+        item.data.stepNumber = num;
+        item.data.stepTitle = item.fileSlug.replace(/^\d+\.\s*/, "");
+        return item;
+      });
+  });
+
+  eleventyConfig.addGlobalData("eleventyComputed.permalink", () => {
+    return (data) => {
+      if (/\/how\/\d+\./.test(data.page.inputPath)) return false;
+      return data.permalink;
+    };
   });
 
   eleventyConfig.addPlugin(interlinker, {
