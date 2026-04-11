@@ -10,7 +10,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/");
 
   eleventyConfig.addPassthroughCopy({
-    "fonts": "fonts"
+    "fonts": "fonts",
+    "favicon.ico": "favicon.ico"
   });
 
   eleventyConfig.addPassthroughCopy("Website/**/*.{jpg,jpeg,png,gif,svg,webp}");
