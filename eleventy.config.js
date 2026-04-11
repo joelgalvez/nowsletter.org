@@ -1,8 +1,15 @@
 import interlinker from "@photogabble/eleventy-plugin-interlinker";
+import { execSync } from "child_process";
 
 export default function(eleventyConfig) {
+  // Build Tailwind CSS as part of 11ty's build
+  eleventyConfig.on("eleventy.before", () => {
+    execSync("npx tailwindcss -i ./src/input.css -o ./_site/style.css --minify");
+  });
+
+  eleventyConfig.addWatchTarget("src/");
+
   eleventyConfig.addPassthroughCopy({
-    "style.css": "style.css",
     "fonts": "fonts"
   });
 
@@ -19,10 +26,6 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData("layout", "main.njk");
-
-  eleventyConfig.setServerOptions({
-    watch: ["style.css"]
-  });
 
   eleventyConfig.addTransform("external-links", (content) => {
     return content.replace(/<a\s+href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
