@@ -20,9 +20,10 @@ export default function(eleventyConfig) {
     // Derive directory from input path (e.g. ./Website/how/file.md → /how/)
     const inputDir = data.page.inputPath.replace(/^\.\/Website/, "").replace(/\/[^/]+$/, "/");
     const dir = inputDir || "/";
-    return content.replace(/!\[\[([^\]]+\.(?:jpg|jpeg|png|gif|svg|webp))\]\]/gi, (match, filepath) => {
+    return content.replace(/!\[\[([^\]|]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|(\d+))?\]\]/gi, (match, filepath, width) => {
       const basename = filepath.split("/").pop();
-      return `![${basename}](${dir}${basename})`;
+      const widthAttr = width ? ` width="${width}"` : "";
+      return `<img src="${dir}${basename}" alt="${basename}"${widthAttr}>`;
     });
   });
 

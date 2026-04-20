@@ -182,8 +182,12 @@ h4 {
     mix-blend-mode: darken;
 }
 
-img {
+img:not([src$=".svg"]) {
 	@apply  my-8 rounded-2xl shadow-2xl;
+}
+
+img[src$=".svg"] {
+	@apply  mb-8 md:mb-16;
 }
 
 } /* end @layer base */
