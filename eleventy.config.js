@@ -14,7 +14,7 @@ export default function(eleventyConfig) {
     "favicon.ico": "favicon.ico"
   });
 
-  eleventyConfig.addPassthroughCopy("Website/**/*.{jpg,jpeg,png,gif,svg,webp}");
+  eleventyConfig.addPassthroughCopy("Website/**/*.{jpg,jpeg,png,gif,svg,webp,mp4}");
 
   eleventyConfig.addPreprocessor("obsidian-images", "md", (data, content) => {
     // Derive directory from input path (e.g. ./Website/how/file.md → /how/)
@@ -24,6 +24,16 @@ export default function(eleventyConfig) {
       const basename = filepath.split("/").pop();
       const widthAttr = width ? ` width="${width}"` : "";
       return `<img src="${dir}${basename}" alt="${basename}"${widthAttr}>`;
+    });
+  });
+
+  eleventyConfig.addPreprocessor("obsidian-videos", "md", (data, content) => {
+    const inputDir = data.page.inputPath.replace(/^\.\/Website/, "").replace(/\/[^/]+$/, "/");
+    const dir = inputDir || "/";
+    return content.replace(/!\[\[([^\]|]+\.(?:mp4|webm|mov))(?:\|(\d+))?\]\]/gi, (match, filepath, width) => {
+      const basename = filepath.split("/").pop();
+      const widthAttr = width ? ` width="${width}"` : "";
+      return `<video src="${dir}${basename}" controls${widthAttr}></video>`;
     });
   });
 

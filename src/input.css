@@ -182,6 +182,7 @@ h4 {
     mix-blend-mode: darken;
 }
 
+video,
 img:not([src$=".svg"]) {
 	@apply  my-8 rounded-2xl shadow-2xl;
 }
