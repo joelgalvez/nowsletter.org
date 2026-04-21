@@ -184,7 +184,7 @@ h4 {
 
 video {
 	@apply my-8 rounded-2xl shadow-2xl w-full;
-	aspect-ratio: 2760 / 1750;
+	aspect-ratio: 2794 / 1722;
 }
 
 img:not([src$=".svg"]) {
