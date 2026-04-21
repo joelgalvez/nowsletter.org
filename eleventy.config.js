@@ -32,8 +32,15 @@ export default function(eleventyConfig) {
     const dir = inputDir || "/";
     return content.replace(/!\[\[([^\]|]+\.(?:mp4|webm|mov))(?:\|(\d+))?\]\]/gi, (match, filepath, width) => {
       const basename = filepath.split("/").pop();
+      const filePath = `Website${dir}${basename}`;
+      let dims = "";
+      try {
+        const probe = execSync(`ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "${filePath}"`, { encoding: "utf-8" }).trim();
+        const [w, h] = probe.split(",");
+        if (w && h) dims = ` width="${w}" height="${h}"`;
+      } catch {}
       const widthAttr = width ? ` width="${width}"` : "";
-      return `<video src="${dir}${basename}" controls${widthAttr}></video>`;
+      return `<video src="${dir}${basename}" controls${widthAttr}${dims}></video>`;
     });
   });
 
