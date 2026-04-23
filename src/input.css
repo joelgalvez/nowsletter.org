@@ -188,11 +188,11 @@ video {
 }
 
 img:not([src$=".svg"]) {
-	@apply  my-8 rounded-2xl shadow-2xl;
+	/* @apply  my-8 rounded-2xl shadow-2xl; */
 }
 
 img[src$=".svg"] {
-	@apply  mb-8 md:mb-16;
+	/* @apply  mb-8 md:mb-16; */
 }
 
 } /* end @layer base */
