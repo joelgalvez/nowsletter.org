@@ -127,6 +127,14 @@ ul li::before {
     /* border-radius: 50%; */
 }
 
+ol {
+    @apply mx-8 my-8;
+}
+
+ol li {
+    @apply list-decimal list-inside my-2;
+}
+
 /* Details/Summary custom markers */
 details {
     overflow: hidden;
@@ -162,7 +170,7 @@ details[open] summary .inner::before {
 }
 .text ul + h3,
 .text p + h3 {
-    @apply mt-12;
+    @apply mt-16;
 }
 
 svg {
@@ -189,7 +197,7 @@ video {
 }
 
 img:not([src$=".svg"]) {
-	/* @apply  my-8 rounded-2xl shadow-2xl; */
+	@apply  my-8;
 }
 
 img[src$=".svg"] {
