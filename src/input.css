@@ -161,6 +161,10 @@ details[open] summary .inner::before {
     content: '−';
 }
 
+.text {
+    @apply text-pretty;
+}
+
 .text h2 {
     @apply text-3xl md:text-6xl lg:text-8xl italic mb-8 md:mb-16;
 }
