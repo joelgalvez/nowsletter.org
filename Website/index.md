@@ -41,13 +41,13 @@ Currently I'm using newsletters in combination with local AI, and for the first 
 
 Newsletters are an imperfect source of data. AI can't make them perfect, but it can act as a rough translation between the sender's intent and my interest. In this case, that's getting event data. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
 
-Then, almost by accident, I discovered that, since this is email, it feels natural to ask for a reaction to the result.
+Since this is email, it feels natural to ask for a reaction to the result.
 
 Newsletters are general-purpose, just like a web page. But unlike a web page, they are discrete pieces of information sent at a point in time. That makes them easier to react to.
 
 So I thought: this is a nice way to work with AI. The model gives some proposals, and some of them are wrong. If the mistakes are expected and reacting together is easy, then it's not dodgy anymore. Consent is baked into the ability to react.
 
-I suspect this might not work as well on an individual level: If it were just me using something like Apple Intelligence reading my emails on my computer, I think I'd be more likely to take the AI's result at face value.
+I suspect this might not work as well on an individual level: If it were just me using something like Apple Intelligence reading my emails on my computer, I think I'd be more likely to take the result coming from the model at face value.
 
 It also might not scale beyond places that know me. They need to trust me, at least a little bit.
 
