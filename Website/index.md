@@ -33,7 +33,7 @@ I also tried using publicly or semi-publicly available data. There's a lot of it
 
 There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but the data is missing.
 
-### What works
+### What does work
 Currently I'm using newsletters in combination with local AI, and for the first time the project passes my litmus test:
 
 1. It contains all the sources I care about.
