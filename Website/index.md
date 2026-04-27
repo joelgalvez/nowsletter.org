@@ -1,7 +1,5 @@
 ---
-title: index
-
-
+title: NOWSLETTER
 ---
 ## NOWSLETTER
 
