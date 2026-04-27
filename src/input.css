@@ -63,6 +63,7 @@ a {
 }
 
 
+.text p + h4,
 .text p + p {
     @apply mt-4;
 }
@@ -172,18 +173,21 @@ details[open] summary .inner::before {
 .text h3 {
     @apply  mb-2 text-2xl md:text-3xl;
 }
+
 .text ul + h3,
+.text h4 + h3,
 .text p + h3 {
     @apply mt-16;
+}
+
+h4 {
+    @apply text-gray-400;
 }
 
 svg {
     @apply w-full h-full;
 }
 
-h4 {
-    @apply text-4xl;
-}
 
 .invert-c {
     background: #fff066 !important;
