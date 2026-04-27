@@ -17,19 +17,21 @@ Others might find this useful to make the process of collecting events easier, m
 
 
 ### Background
-After being part of the Facebook exodus around 2018, I was missing the comforts of Facebook Events and I became interested in the problem of how to recreate that overview. This was not a technical problem, but rather about how to get the data.
+After being part of the Facebook exodus around 2018, I missed the comforts of Facebook Events and became interested in the problem of how to recreate that kind of overview. This wasn't a technical problem. It's about how to get the data.
 
 My interest was in finding a method, not in becoming the next hub or some kind of curator. In particular, I wanted this to work at the smallest scale. Someone like me, some guy, should be able to stay on top of small and temporary places. The big places are never a problem.
 
-I tried various approaches. First, I tried to convince everyone to export .ics/iCalendar files (it worked ...partially :D). It was meant as a kind of budget version of the semantic web, using .ics files. Too much work to ever take off. You also want to know who you're sharing with. Sharing machine-readable data with "the world" without knowing who it's for is a strange thing to ask today. I realised I had no intention to "liberate" any data, it's up to the sender where it should end up, not me.
+I tried various approaches. First, I tried to convince everyone to export .ics/iCalendar files (it worked... partially :D). It was meant as a kind of budget version of the semantic web, using .ics files. Too much work to ever take off. Besides, you want to know who you're sharing with. Sharing machine-readable data with 'the world' without knowing who it's for is a strange thing to ask today.
 
-Second, I tried "scraping" websites. I was surprised how badly it worked. A lot of the places I care about barely have websites. And if you just grab some data, you can't tell whether the intent comes across. Checking the quality of scraped data is almost as much work as adding it by hand. It also feels dodgy, consent is unclear. 
+I realised I had no intention of "liberating" any data. It's up to the sender where it ends up, not me.
 
-Scraping instagram is similar. It works, but to automate the work is an uphill battle. Also, I was missing the connection to the sender. Anyway, it's besides the point to rely on Instagram.
+Second, I tried "scraping" websites. It worked surprisingly badly. A lot of the places I care about barely have websites. And if you just grab some data, you can't tell whether the intent comes across. Checking the quality of scraped data is almost as much work as adding it by hand. It also feels dodgy, since consent is unclear.
 
-I also tried using publicly or semi-publicly available data. There's a lot of it, and it can be quite good, at least for the places that sell tickets. I was excited about it at first, but I quickly realised that once you use someone else's archive, you're shaped by their worldview. They have different interests than mine and it skews my project too much. For example, I got access to a great API on experimental music, but it's not my main interest. I wrote a script to reshape their data, but that's a brittle piece of code to maintain. I need to treat each source differently and that's too much work.
+Scraping Instagram is similar. It works, but automating the work is an uphill battle. There's also no connection to the sender. Anyway, relying on Instagram is missing the point.
 
-There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, the data is missing.
+I also tried using publicly or semi-publicly available data. There's a lot of it, and it can be quite good, at least for the places that sell tickets. I was excited about it at first, but I quickly realised that once you use someone else's archive, you're shaped by their worldview. Their interests are different from mine, and that skews my project too much. For example, I got access to a great API on experimental music, but it's not my main interest. I wrote a script to reshape their data, but the code is brittle and hard to maintain. I'd need to treat each source differently, and that's too much work.
+
+There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but the data is missing.
 
 ### What does work
 Currently I'm using newsletters in combination with local AI, and for the first time the project passes my litmus test:
@@ -38,11 +40,13 @@ Currently I'm using newsletters in combination with local AI, and for the first 
 2. It's easy.
 3. It doesn't feel dodgy.
 
-AI can make a rough translation between the sender's intent and my interest. In this case, that's getting event data. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
+AI can make a rough translation between the sender's intent and my interest. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
 
-Newsletters are email, so I can just reply and ask "These are the events i got, does this look good to you?" This would be harder if scraping web pages, for example.
+Newsletters are email, so I can just reply and ask: "These are the events I got. Does this look good to you?" This would feel less natural if I were scraping web pages, for example.
 
-So I thought: this is a nice way to work with AI. It can only do 80%, that's clear by now. It's still easier to react than to act. If I share the 20% with the original author, I think I look at it with a sharper eye. If the author also can react, It's also not dodgy anymore. Consent is baked in.
+So I thought: this is a nice way to work with AI. It can only do 80%, but it's still easier to react than to act.
+
+If I share this 20% with the original author, I think I look at it with a sharper eye. If the author can react too, it's not dodgy anymore. Consent is baked in.
 <div id="how-does-this-work">&nbsp;</div>
 
 ### How does it work?
