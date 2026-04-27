@@ -31,26 +31,22 @@ I also tried using publicly or semi-publicly available data. There's a lot of it
 
 There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are technical solutions, the data is missing.
 
+### What does work
 Currently I'm using newsletters in combination with local AI, and for the first time the project passes my litmus test:
 
 1. It contains all the sources I care about.
 2. It's easy.
 3. It doesn't feel dodgy.
 
-Newsletters are an imperfect source of data. AI can't make them perfect, but it can act as a rough translation between the sender's intent and my interest. In this case, that's getting event data. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
+AI can make a rough translation between the sender's intent and my interest. In this case, that's getting event data. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
 
-Since this is email, it feels natural to ask for a reaction to the result.
+Newsletters are email, so I can just reply and ask "These are the events i got, does this look good to you?"
 
-Newsletters are general-purpose, just like a web page. But unlike a web page, they are discrete pieces of information sent at a point in time. That makes them easier to react to.
+So I thought: this is a nice way to work with AI. It can only do 80%, that's clear by now  but it's still easier to react than to act. If I share the 20% with the original author, I think I look at it with a sharper eye.
 
-So I thought: this is a nice way to work with AI. The model gives some proposals, and some of them are wrong. If the mistakes are expected and reacting together is easy, then it's not dodgy anymore. Consent is baked into the ability to react.
-
-I suspect this might not work as well on an individual level: If it were just me using something like Apple Intelligence reading my emails on my computer, I think I'd be more likely to take the result coming from the model at face value.
-
-It also might not scale beyond places that know me. They need to trust me, at least a little bit.
+It's also not dodgy anymore. Consent is baked into the ability to react. 
 
 <div id="how-does-this-work">&nbsp;</div>
-
 
 ### How does it work?
 There is a split view where it's possible to compare the newsletter and the result from a local AI. Newsletter to the left and events on the right.
