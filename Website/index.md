@@ -21,7 +21,7 @@ After being part of the Facebook exodus around 2018, I missed the comforts of Fa
 
 My interest was in finding a method, not in becoming the next hub or some kind of curator. In particular, I wanted this to work at the smallest scale. Someone like me, some guy, should be able to keep up to date with the small places. The big places are never a problem.
 
-I tried various approaches. First, I tried to convince everyone to export .ics/iCalendar files (it worked... partially :D). It was meant as a kind of budget version of the semantic web, using .ics files. Too much work to ever take off. Besides, you want to know who you're sharing with. Sharing machine-readable data with "the world" without knowing who it's for is a strange thing to ask today.
+I tried various approaches. First, I tried to convince everyone to export .ics/iCalendar files (it worked... partially). It was meant as a kind of budget version of the semantic web, using .ics files. Too much work to ever take off. Besides, you want to know who you're sharing with. Sharing machine-readable data with "the world" without knowing who it's for is a strange thing to ask today.
 
 I realised I had no intention of "liberating" any data. It's up to the sender where it ends up, not me.
 
@@ -44,7 +44,7 @@ AI can make a rough translation between the sender's intent and my interest. Sin
 
 Newsletters are email, so I can just reply and ask: "These are the events I got. Does this look good to you?" This would feel less natural if I were scraping web pages, for example.
 
-So I thought: this is a nice way to work with AI. It can only do 80%, but it's still easier to react than to act. If I share the remaining 20% with the original author, I think I look at it with a sharper eye. 
+So I thought: this is a nice way to work with AI. It can only do 80%, but it's still easier to react than to act. If I share the remaining 20% with the original author. Since I know I'm not alone, I think I look at it with a sharper eye. 
 
 <div id="how-does-this-work">&nbsp;</div>
 
