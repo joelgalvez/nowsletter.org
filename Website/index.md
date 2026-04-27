@@ -71,7 +71,7 @@ You'd need one person who is in the middle, signs up for the newsletters and is 
 These events can potentially be published further via open protocols (Mastodon, Bluesky, ActivityPub, ATproto, Gancio, Mobilizon, etc) or other newsletters and websites. 
 
 ### Could this be misused to collect large amounts of data?
-If you don't want me to have your newsletter, you'll remove me from your recipient list. I suspect and hope that this method of collecting data doesn't scale very far beyond human connection.
+If you don't want me to have your newsletter, you'll remove me from your recipient list.
 
 ### Privacy
 No data goes to any third party. 
