@@ -33,7 +33,7 @@ I also tried using publicly or semi-publicly available data. There's a lot of it
 
 There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but the data is missing.
 
-### What does work
+### What works
 Currently I'm using newsletters in combination with local AI, and for the first time the project passes my litmus test:
 
 1. It contains all the sources I care about.
@@ -44,9 +44,8 @@ AI can make a rough translation between the sender's intent and my interest. Sin
 
 Newsletters are email, so I can just reply and ask: "These are the events I got. Does this look good to you?" This would feel less natural if I were scraping web pages, for example.
 
-So I thought: this is a nice way to work with AI. It can only do 80%, but it's still easier to react than to act.
+So I thought: this is a nice way to work with AI. It can only do 80%, but it's still easier to react than to act. If I share the remaining 20% with the original author, I think I look at it with a sharper eye. 
 
-If I share this 20% with the original author, I think I look at it with a sharper eye. If the author can react too, it's not dodgy anymore. Consent is baked in.
 <div id="how-does-this-work">&nbsp;</div>
 
 ### How does it work?
