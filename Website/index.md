@@ -33,7 +33,7 @@ You'd need one person who is in the middle, signs up for the newsletters and is 
 ### Background
 After being part of the Facebook exodus around 2018, I missed the comforts of Facebook Events and became interested in the problem of how to recreate that kind of overview. This wasn't a technical problem. It's about how to get the data.
 
-My interest was in finding a method, not in becoming the next hub or some kind of curator. In particular, I wanted this to work at the smallest scale. Someone like me, some guy, should be able to keep up to date with the small places. The big places are never a problem.
+My interest was in finding a method, not in becoming the next hub or becoming a curator. In particular, I wanted this to work at the smallest scale. Someone like me, some guy, should be able to keep up to date with the small places. The big places are never a problem.
 
 I tried various approaches. First, I tried to convince everyone to export .ics/iCalendar files (it worked... partially). It was meant as a kind of budget version of the semantic web, using .ics files. Too much work to ever take off. Besides, you want to know who you're sharing with. I had no intention of "liberating" any data so I felt increasingly uneasy about this approach. It's up to the sender where it ends up, not me. 
 
@@ -43,10 +43,10 @@ Scraping Instagram is similar. It works, but automating the work is an uphill ba
 
 I also tried using publicly or semi-publicly available data. There's a lot of it, and it can be quite good, at least for the places that sell tickets. I was excited about it at first, but I quickly realised that once you use someone else's archive, you're shaped by their worldview. To shape it to my interest I'd need to treat each source differently, and that's too much work.
 
-There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but the data I care about is missing.
+There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but most of the data is missing.
 
 ### What does work
-Getting this to work has been an ongoing interest of mine, and I think I've tested most approaches. I now finally have something that passes my own litmus test:
+This approach, combining local AI and newsletters is something that passes my own litmus test:
 
 1. It contains all the sources I care about.
 2. It's easy.
@@ -55,13 +55,6 @@ Getting this to work has been an ongoing interest of mine, and I think I've test
 AI can make a rough translation between the sender's intent and my interest. Since I'm using local AI, I can keep an eye on electricity use and there are no privacy issues.
 
 Newsletters are email, so I can just reply and ask: "These are the events I got. Does this look good to you?" This would feel less natural if I were scraping web pages, for example.
-
-### Thoughts
-Data collection becomes nicer and easier when the senders are involved in the process. Instead of a single "upload", it's more of a gradual refinement.
-
-The main role of AI is to trigger a response, not to produce a result. If I share the process of responding with someone else, I'm less inclined to take the AI's output at face value.
-
-Since the newsletter authors are already involved, it's easy to ask them if they would be okay with what to do next with their data.
 
 ### What's next?
 These events can potentially be published further via open protocols (Mastodon, Bluesky, ActivityPub, ATproto, Gancio, Mobilizon, etc) or other newsletters and websites. 
