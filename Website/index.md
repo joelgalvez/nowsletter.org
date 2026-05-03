@@ -76,7 +76,7 @@ Each newsletter takes 1-20 seconds, average about 2-5 seconds using Qwen3.6-35B-
 
 This means 1000-10.000 newsletters per 1 kWh. I currently get about one newsletter a day. Not negligible, but seem to be going in that direction. Maybe it's useful to distinguish between small/local and big scale datacenter AI?
 ### Training and bias
-I've got kinda decent results from Apertus (Apertus-8B-Instruct-2509-Q8_0), a fully open and reproducible model trained on transparent data. I can't run their 70B model but judging from the progress I'm guessing that I could soon rely on a model with transparent training.
+I've got kinda decent results from Apertus (Apertus-8B-Instruct-2509-Q8_0), a fully open and reproducible model trained on transparent data. I can't run their 70B model, but judging from the progress I'm guessing that I could soon rely on a model with transparent training.
 
 ### Is this project open source?
 Yes. [Server](https://github.com/joelgalvez/nowsletter) (Web server + incoming email), [client](https://github.com/joelgalvez/runmodel) (LLM jobs, talks to llama-server). If you run into issues with setting things up, let me know.
