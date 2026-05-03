@@ -45,6 +45,8 @@ I also tried using publicly or semi-publicly available data. There's a lot of it
 
 There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but most of the data is missing.
 
+A big chunk of this event data is available in newsletters, but it needs a bit of local context to be extracted.
+
 ### What does work
 This approach, combining local AI and newsletters is something that passes my own litmus test:
 
@@ -73,10 +75,10 @@ If I am the one collecting the data, nobody else gets it. There are no third par
 Each newsletter takes 1-20 seconds, average about 2-5 seconds using Qwen3.6-35B-A3B-UD-Q4_K_XL (Just started trying it out, most mainstream models works fine). My downclocked 3090 draws 210 watts while doing inference. 
 
 This means 1000-10.000 newsletters per 1 kWh. I currently get about one newsletter a day. Not negligible, but seem to be going in that direction. Maybe it's useful to distinguish between small/local and big scale datacenter AI?
+### Training and bias
+I've got kinda decent results from Apertus (Apertus-8B-Instruct-2509-Q8_0), a fully open and reproducible model trained on transparent data. I can't run their 70B model but judging from the progress I'm guessing that I could soon rely on a model with transparent training.
 
-I've got almost kinda decent results from Apertus 8B, the fully open and reproducible model from Switzerland. Maybe soon it will be possible to rely on a small model with transparent training.
-
-### Is it open source?
+### Is this project open source?
 Yes. [Server](https://github.com/joelgalvez/nowsletter) (Web server + incoming email), [client](https://github.com/joelgalvez/runmodel) (LLM jobs, talks to llama-server). If you run into issues with setting things up, let me know.
 ### Contact
 mail@joelgalvez.com
