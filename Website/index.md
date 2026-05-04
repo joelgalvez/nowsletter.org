@@ -13,16 +13,19 @@ This is a way for me ([Joel](https://joelgalvez.com)) to stay up to date without
 
 This could be useful for anyone collecting events from newsletters, but it works best if you have some connection to the people sending them.
 
+### Newsletters? Why? What year is this??
+Newsletters are amazing. They're low-tech: anyone can make one. They're not tied to any specific platform. They're entirely decentralised. They're not private, but also not entirely public: they're for a specific context. The newsletter is a dinosaur from an earlier internet, but nothing else checks all these boxes, so they're still around.
+
+Normally we think of newsletters as a kind of flyer, to be read and thrown away. I think they can be a valuable source of data for a local context. To grab that data, though, you also need to be part of that local context.
+
 ### How does it work?
-What I see is this split view where it's possible to compare the newsletter and the result from a local AI. Newsletter to the left and events on the right.
+As the admin of joelsnewsletters.com, what I see is a split view where it's possible to compare the newsletter and the result from a local AI. Newsletter to the left and events on the right.
 
 ![[scroll.mp4]]
 
 The newsletter author sees the same thing. They can also check and change things, if they want. Usually its me doing most of the work, but not always. 
 
-Since we use the same interface, we can collaborate without having to spell things out. They don't need to tell me "please change X to Y".
-
-AI does the first proposal, but it's not the final result: AI + 2 humans.
+Since we use the same interface, we can collaborate without having to spell things out. They don't need to tell me "please change X to Y". AI does the first proposal, but it's not the final result: AI + 2 humans.
 
 ### How do I try this out?
 You can run this yourself (link below), or I can run it for you. If you are interested, let me know at mail@joelgalvez.com. 
@@ -75,8 +78,11 @@ If I am the one collecting the data, nobody else gets it. There are no third par
 Each newsletter takes 1-20 seconds, average about 2-5 seconds using Qwen3.6-35B-A3B-UD-Q4_K_XL (Just started trying it out, most mainstream models works fine). My downclocked 3090 draws 210 watts while doing inference. 
 
 This means 1000-10.000 newsletters per 1 kWh. I currently get about one newsletter a day. Not negligible, but seem to be going in that direction. Maybe it's useful to distinguish between small/local and big scale datacenter AI?
+
 ### Training and bias
 I've got kinda decent results from Apertus (Apertus-8B-Instruct-2509-Q8_0), a fully open and reproducible model trained on transparent data. I can't run their 70B model, but judging from the progress I'm guessing that I could soon rely on a model with transparent training.
+
+
 
 ### Is this project open source?
 Yes. [Server](https://github.com/joelgalvez/nowsletter) (Web server + incoming email), [client](https://github.com/joelgalvez/runmodel) (LLM jobs, talks to llama-server). If you run into issues with setting things up, let me know.
