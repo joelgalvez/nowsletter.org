@@ -13,7 +13,7 @@ This is a way for me ([Joel](https://joelgalvez.com)) to stay up to date without
 
 This could be useful for anyone collecting events from newsletters, but it works best if you have some connection to the people sending them.
 
-### Newsletters? Why? What year is this??
+### Newsletters? Why?
 Newsletters are amazing. They're low-tech: anyone can make one. They're not tied to any specific platform. They're entirely decentralised. They're not private, but also not entirely public: they're for a specific context. The newsletter is a dinosaur from an earlier internet, but nothing else checks all these boxes, so they're still around.
 
 Normally we think of newsletters as a kind of flyer, to be read and thrown away. I think they can be a valuable source of data for a local context. To grab that data, though, you also need to be part of that local context.
