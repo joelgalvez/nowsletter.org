@@ -16,7 +16,7 @@ This could be useful for anyone collecting events from newsletters, but it works
 ### Newsletters? Why?
 Newsletters are amazing. They're low-tech: anyone can make one. They're not tied to any specific platform. They're entirely decentralised. They're not private, but also not entirely public: they're for a specific context. The newsletter is a dinosaur from an earlier internet, but nothing else checks all these boxes, so they're still around.
 
-Normally we think of newsletters as a kind of flyer, to be read and thrown away. I think they can be a valuable source of data for a local context. To grab that data, though, you also need to be part of that local context.
+Normally we think of newsletters as a kind of flyer, to be read and thrown away. I think they can be a valuable source of data in a local context. 
 
 ### How does it work?
 As the admin of joelsnewsletters.com, what I see is a split view where it's possible to compare the newsletter and the result from a local AI. Newsletter to the left and events on the right.
@@ -47,8 +47,6 @@ Scraping Instagram is similar. It works, but automating the work is an uphill ba
 I also tried using publicly or semi-publicly available data. There's a lot of it, and it can be quite good, at least for the places that sell tickets. I was excited about it at first, but I quickly realised that once you use someone else's archive, you're shaped by their worldview. To shape it to my interest I'd need to treat each source differently, and that's too much work.
 
 There is Bluesky, ATproto, Smoke Signal, Mastodon, ActivityPub, Gancio, Mobilizon, etc. These are great technical solutions, but most of the data is missing.
-
-A big chunk of this event data is available in newsletters, but it needs a bit of local context to be extracted.
 
 ### What does work
 This approach, combining local AI and newsletters is something that passes my own litmus test:
